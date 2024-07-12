@@ -14,40 +14,40 @@ const UploadFile = () => {
     formData.append('file', selectedFile);
 
     axios.post('http://localhost:8000/validate_xml', formData)
-    .then(res => {
-      // console.log("DATA: ", res.data)
-      switch (res.data.status) {
-        case 200:  // Todo está bien
-          setModalContent({
-            title: 'Exito',
-            body: res.data.message,
-            variant: 'success'
-          });
-          break;
-        case 400:  // Bad Request
-          setModalContent({
-            title: 'Error',
-            body: res.data.message,
-            variant: 'danger'
-          });
-          break;
-        default:
-          setModalContent({
-            title: 'Error',
-            body: 'Ha ocurrido un error desconocido.',
-            variant: 'danger'
-          });
-      }
-      setShowModal(true);
-    })
-    .catch(err => {
-      setModalContent({
-        title: 'Error',
-        body: err.message,
-        variant: 'danger'
+      .then(res => {
+        // console.log("DATA: ", res.data)
+        switch (res.data.status) {
+          case 200:  // Todo está bien
+            setModalContent({
+              title: 'Exito',
+              body: res.data.message,
+              variant: 'success'
+            });
+            break;
+          case 400:  // Bad Request
+            setModalContent({
+              title: 'Error',
+              body: res.data.message,
+              variant: 'danger'
+            });
+            break;
+          default:
+            setModalContent({
+              title: 'Error',
+              body: 'Ha ocurrido un error desconocido.',
+              variant: 'danger'
+            });
+        }
+        setShowModal(true);
+      })
+      .catch(err => {
+        setModalContent({
+          title: 'Error',
+          body: err.message,
+          variant: 'danger'
+        });
+        setShowModal(true);
       });
-      setShowModal(true);
-    });
 
 
   };
@@ -60,11 +60,11 @@ const UploadFile = () => {
     <div className="container mb-4">
       <div className="card mt-4">
         <div className="card-body">
-          <h5 className="card-title">Upload File</h5>
+          <h5 className="card-title">Sube un XML</h5>
           <form onSubmit={submitForm}>
             <div className="mb-3">
               <label htmlFor="file" className="form-label">
-                Choose File
+                Selecciona archivo
               </label>
               <input
                 type="file"
@@ -75,7 +75,7 @@ const UploadFile = () => {
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Submit
+              Subir
             </button>
           </form>
         </div>
@@ -92,7 +92,7 @@ const UploadFile = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Close
+            Cerrar
           </Button>
         </Modal.Footer>
       </Modal>
