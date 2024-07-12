@@ -249,283 +249,240 @@ function FormXSD() {
 
   // AQUI PARA ABAJO ESTA EL HTML ES DONDE SE TIENE QUE EDITAR. bueno
   return (
-    <div className='container mt-5' >
-      <form className='formulario' onSubmit={handleSubmit}>
-        <h2 className="mb-4 text-center">Crear tu Landing Page</h2>
+        <div className='container my-5 p-4 bg-light rounded'>
+    <div className="row">
+        <div className="col-lg-6">
+            <form className='formulario' onSubmit={handleSubmit}>
+                <h2 className="mb-4 text-center text-primary">Crear Nuevo Blog</h2>
 
-
-
-        <div className="mb-4 card">
-          <div className="card-body">
-            <label htmlFor="header" className="form-label">Header:</label>
-            <select id="header" onChange={handleHeaderChange} className="form-control">
-              <option value="no">No</option>
-              <option value="si">Sí</option>
-            </select>
-
-            {header && (
-              <>
-                <label htmlFor="redesSociales1" className="form-label mt-3">redesSociales:</label>
-                <select id="redesSociales1" onChange={handleRedesSocialesActiveChange} className="form-control">
-                  <option value="no">No</option>
-                  <option value="si">Sí</option>
-                </select>
-
-                {redesSociales1.active && (
-                  <>
+                {/* Configuración del Encabezado */}
+                <div className="card mb-4 border-primary">
+                    <div className="card-header bg-primary text-white">Configuración del Encabezado</div>
                     <div className="card-body">
-                      {/* FACEBOOK */}
-                      <Form.Check
-                        type="switch"
-                        id="redesSociales1FacebookSwitch"
-                        label="Facebook:"
-                        checked={redesSociales1.facebook.isActive}
-                        onChange={handleRedesSocialesFacebookActiveChange}
-                      />
-                      {redesSociales1.facebook.isActive ?
-                        <input type="text" placeholder="url facebook" className="form-control" onChange={handleRedesSocialesFacebookUrlChange} value={redesSociales1.facebook.url} />
-                        :
-                        <></>
-                      }
+                        <div className="mb-3">
+                            <label htmlFor="header" className="form-label">Header:</label>
+                            <select id="header" onChange={handleHeaderChange} className="form-control">
+                                <option value="no">No</option>
+                                <option value="si">Sí</option>
+                            </select>
+                        </div>
 
-                      {/* INSTAGRAM */}
-                      <Form.Check
-                        type="switch"
-                        id="redesSociales1InstagramSwitch"
-                        label="Instagram:"
-                        checked={redesSociales1.instagram.isActive}
-                        onChange={handleRedesSocialesInstagramActiveChange}
-                      />
-                      {redesSociales1.instagram.isActive ?
-                        <input type="text" placeholder="Url instragram" className="form-control" onChange={handleRedesSocialesInstagramUrlChange} value={redesSociales1.instagram.url} />
-                        :
-                        <></>
-                      }
-                      {/* TWITTER */}
-                      <Form.Check
-                        type="switch"
-                        id="redesSociales1TwitterSwitch"
-                        label="Twitter:"
-                        checked={redesSociales1.twitter.isActive}
-                        onChange={handleRedesSocialesTwitterActiveChange}
-                      />
-                      {redesSociales1.twitter.isActive ?
-                        <input type="text" placeholder="Url twitter" className="form-control" onChange={handleRedesSocialesTwitterUrlChange} value={redesSociales1.twitter.url} />
-                        :
-                        <></>
-                      }
-                      {/* YOUTUBE */}
-                      <Form.Check
-                        type="switch"
-                        id="redesSociales1YoutubeSwitch"
-                        label="Youtube:"
-                        checked={redesSociales1.youtube.isActive}
-                        onChange={handleRedesSocialesYoutubeActiveChange}
-                      />
-                      {redesSociales1.youtube.isActive ?
-                        <input type="text" placeholder="Url youtube" className="form-control" onChange={handleRedesSocialesYoutubeUrlChange} value={redesSociales1.youtube.url} />
-                        :
-                        <></>
-                      }
-                      {/* WHATSAPP */}
-                      <Form.Check
-                        type="switch"
-                        id="redesSociales1WhatsappSwitch"
-                        label="Whatsapp:"
-                        checked={redesSociales1.whatsapp.isActive}
-                        onChange={handleRedesSocialesWhatsappActiveChange}
-                      />
-                      {redesSociales1.whatsapp.isActive ?
-                        <input type="text" placeholder="Url whatsapp" className="form-control" onChange={handleRedesSocialesWhatsappUrlChange} value={redesSociales1.whatsapp.url} />
-                        :
-                        <></>
-                      }
+                        {header && (
+                            <>
+                                {/* Redes Sociales */}
+                                <div className="mb-3">
+                                    <label htmlFor="redesSociales1" className="form-label">Redes Sociales:</label>
+                                    <select id="redesSociales1" onChange={handleRedesSocialesActiveChange} className="form-control">
+                                        <option value="no">No</option>
+                                        <option value="si">Sí</option>
+                                    </select>
+
+                                    {redesSociales1.active && (
+                                        <div className="mt-3">
+                                            <div className="form-check form-switch">
+                                                <input className="form-check-input" type="checkbox" id="redesSociales1FacebookSwitch" checked={redesSociales1.facebook.isActive} onChange={handleRedesSocialesFacebookActiveChange} />
+                                                <label className="form-check-label" htmlFor="redesSociales1FacebookSwitch">Facebook:</label>
+                                                {redesSociales1.facebook.isActive && (
+                                                    <input type="text" placeholder="URL Facebook" className="form-control mt-2" onChange={handleRedesSocialesFacebookUrlChange} value={redesSociales1.facebook.url} />
+                                                )}
+                                            </div>
+                                            
+                                            <div className="form-check form-switch mt-3">
+                                                <input className="form-check-input" type="checkbox" id="redesSociales1InstagramSwitch" checked={redesSociales1.instagram.isActive} onChange={handleRedesSocialesInstagramActiveChange} />
+                                                <label className="form-check-label" htmlFor="redesSociales1InstagramSwitch">Instagram:</label>
+                                                {redesSociales1.instagram.isActive && (
+                                                    <input type="text" placeholder="URL Instagram" className="form-control mt-2" onChange={handleRedesSocialesInstagramUrlChange} value={redesSociales1.instagram.url} />
+                                                )}
+                                            </div>
+                                            
+                                            <div className="form-check form-switch mt-3">
+                                                <input className="form-check-input" type="checkbox" id="redesSociales1TwitterSwitch" checked={redesSociales1.twitter.isActive} onChange={handleRedesSocialesTwitterActiveChange} />
+                                                <label className="form-check-label" htmlFor="redesSociales1TwitterSwitch">Twitter:</label>
+                                                {redesSociales1.twitter.isActive && (
+                                                    <input type="text" placeholder="URL Twitter" className="form-control mt-2" onChange={handleRedesSocialesTwitterUrlChange} value={redesSociales1.twitter.url} />
+                                                )}
+                                            </div>
+                                            
+                                            <div className="form-check form-switch mt-3">
+                                                <input className="form-check-input" type="checkbox" id="redesSociales1YoutubeSwitch" checked={redesSociales1.youtube.isActive} onChange={handleRedesSocialesYoutubeActiveChange} />
+                                                <label className="form-check-label" htmlFor="redesSociales1YoutubeSwitch">Youtube:</label>
+                                                {redesSociales1.youtube.isActive && (
+                                                    <input type="text" placeholder="URL Youtube" className="form-control mt-2" onChange={handleRedesSocialesYoutubeUrlChange} value={redesSociales1.youtube.url} />
+                                                )}
+                                            </div>
+                                            
+                                            <div className="form-check form-switch mt-3">
+                                                <input className="form-check-input" type="checkbox" id="redesSociales1WhatsappSwitch" checked={redesSociales1.whatsapp.isActive} onChange={handleRedesSocialesWhatsappActiveChange} />
+                                                <label className="form-check-label" htmlFor="redesSociales1WhatsappSwitch">Whatsapp:</label>
+                                                {redesSociales1.whatsapp.isActive && (
+                                                    <input type="text" placeholder="URL Whatsapp" className="form-control mt-2" onChange={handleRedesSocialesWhatsappUrlChange} value={redesSociales1.whatsapp.url} />
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Navbar */}
+                                <div className="mb-3">
+                                    <label htmlFor="navbar" className="form-label">Navbar:</label>
+                                    <select id="navbar" onChange={handleNavbarChange} className="form-control">
+                                        <option value="no">No</option>
+                                        <option value="si">Sí</option>
+                                    </select>
+
+                                    {navbar && (
+                                        <div className="mt-3 card border-info">
+                                            <div className="card-body">
+                                                <div className="mb-3">
+                                                    <label htmlFor="logo" className="form-label">Logo</label>
+                                                    <input type="text" placeholder="URL Imagen Logo" className="form-control" onChange={handleImagenLogoHeader} />
+                                                </div>
+                                                
+                                                <div className="mb-3">
+                                                    <label htmlFor="Pages" className="form-label">Páginas</label>
+                                                    <input type="text" placeholder="Nombre Página" className="form-control" onChange={handlenombrePagesHeader} />
+                                                    <input type="text" placeholder="URL Página" className="form-control mt-2" onChange={handleurlPagesHeader} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </>
+                        )}
                     </div>
-                  </>
-                )}
+                </div>
 
-                <label htmlFor="navbar" className="form-label mt-3">navbar:</label>
-                <select id="navbar" onChange={handleNavbarChange} className="form-control">
-                  <option value="no">No</option>
-                  <option value="si">Sí</option>
-                </select>
-
-
-                {navbar && (
-                  <div>
+                {/* Agregar Posts */}
+                <div className="card mb-4 border-secondary">
+                    <div className="card-header bg-secondary text-white">Agregar Posts</div>
                     <div className="card-body">
-                      <label htmlFor="logo" className="form-label">Logo</label>
-                      <br />
-
-                      <div className="card-body">
-                        <label className="form-label">Imagen de la Barra de navegación:</label>
-                        <input type="text" className="form-control" onChange={handleImagenLogoHeader} />
-
-                        <label className="form-label">URL imagen Navbar:</label>
-                        <input type="text" className="form-control" onChange={handleUrlImagenLogoHeader} />
-                      </div>
-
-                      <label htmlFor="Pages" className="form-label">Paginas</label>
-                      <br />
-
-                      <div className="card-body">
-                        <label className="form-label">Nombre Pagina de navbar</label>
-                        <input type="text" className="form-control" onChange={handlenombrePagesHeader} />
-
-                        <label className="form-label">URL pagina Navbar:</label>
-                        <input type="text" className="form-control" onChange={handleurlPagesHeader} />
-                      </div>
+                        <div className="mb-3">
+                            <label className="form-label">Número de Posts:</label>
+                            <select value={number} onChange={handleNumberPostsChange} className="form-control">
+                                {[...Array(10)].map((_, index) => (
+                                    <option key={index} value={index + 1}>{index + 1}</option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
-                  </div>
-                )}
+                </div>
 
-              </>
-            )}
-          </div>
+                {/* Botón de Enviar */}
+                <button type="submit" className="btn btn-primary btn-lg w-100">Enviar</button>
+            </form>
         </div>
 
+        <div className="col-lg-6">
+            {/* Post Destacado */}
+            <div className="card mb-4 border-warning">
+                <div className="card-header bg-warning text-white">Post Destacado</div>
+                <div className="card-body">
+                    <div className="mb-3">
+                        <label htmlFor="PostDestacado" className="form-label">Post Destacado:</label>
+                        <select id="PostDestacado" onChange={handlePostDestacadoChange} className="form-control">
+                            <option value="no">No</option>
+                            <option value="si">Sí</option>
+                        </select>
 
-        {/* agregar posts */}
-        <div className="mb-4 card">
-          <div className="card-body">
-            <label className="form-label"> Agregar posts</label>
-            <br />
-            <label className="form-label"> Numero:</label>
-            <select value={number} onChange={handleNumberPostsChange} className="form-control">
+                        {PostDestacado && (
+                            <>
+                                <select className="form-control mt-2" onChange={handlePostChange}>
+                                    <option value="">Seleccione un blog</option>
+                                    {db_posts.map((post, index) => (
+                                        <option key={index} value={post.url}>{post.titulo}</option>
+                                    ))}
+                                </select>
+                                {selectedPost && (
+                                    <div className="mt-3">
+                                        <h3>{selectedPost.titulo}</h3>
+                                        <p>{selectedPost.descripcion}</p>
+                                    </div>
+                                )}
+                            </>
+                        )}
+                    </div>
+                </div>
+            </div>
 
-              {[...Array(10)].map((_, index) => (
-                <option key={index} value={index + 1}>
-                  {index + 1}
-                </option>
-              ))}
-            </select>
-          </div>
+            {/* Datos de Contacto */}
+            <div className="card mb-4 border-success">
+                <div className="card-header bg-success text-white">Datos de Contacto</div>
+                <div className="card-body">
+                    <div className="mb-3">
+                        <label className="form-label">¿Desea agregar datos de contacto?</label>
+                        <select value={selectionContacto} onChange={handleContactoChange} className="form-control">
+                            <option value="no">No</option>
+                            <option value="si">Sí</option>
+                        </select>
+
+                        {selectionContacto === 'si' && (
+                            <div className="mt-3">
+                                <label className="form-label">Correo Electrónico:</label>
+                                <input type="text" value={email} onChange={handleEmailChange} className="form-control" />
+                                <label className="form-label mt-2">Página Web:</label>
+                                <input type="text" value={paginaWeb} onChange={handlepaginaWebChange} className="form-control" />
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            {/* Pie de Página */}
+            <div className="card mb-4 border-dark">
+                <div className="card-header bg-dark text-white">Pie de Página</div>
+                <div className="card-body">
+                    <div className="form-check form-switch mb-3">
+                        <input className="form-check-input" type="checkbox" id="footerSwitch" checked={footer.active} onChange={handleFooterActiveChange} />
+                        <label className="form-check-label" htmlFor="footerSwitch">FOOTER</label>
+                    </div>
+                    {footer.active && (
+                        <>
+                            <div className="mb-3">
+                                <label className="form-label">Texto del Pie de Página:</label>
+                                <input type="text" placeholder="Texto" className="form-control" onChange={handleFooterTextoChange} value={footer.texto.content} />
+                            </div>
+                            <div className="form-check form-switch mb-3">
+                                <input className="form-check-input" type="checkbox" id="footerUrlSwitch" checked={footer.url.isActive} onChange={handleFooterUrlActiveChange} />
+                                <label className="form-check-label" htmlFor="footerUrlSwitch">URL del Pie de Página:</label>
+                                {footer.url.isActive && (
+                                    <input type="text" placeholder="URL de Redirección" className="form-control" onChange={handleFooterUrlChange} value={footer.url.content} />
+                                )}
+                            </div>
+                            <div className="form-check form-switch mb-3">
+                                <input className="form-check-input" type="checkbox" id="footerImagenSwitch" checked={footer.imagen.isActive} onChange={handleFooterImagenActiveChange} />
+                                <label className="form-check-label" htmlFor="footerImagenSwitch">Imagen del Pie de Página:</label>
+                                {footer.imagen.isActive && (
+                                    <input type="text" placeholder="URL de la Imagen" className="form-control" onChange={handleFooterImagenChange} value={footer.imagen.content} />
+                                )}
+                            </div>
+                        </>
+                    )}
+                </div>
+            </div>
         </div>
-
-
-
-        <div className="mb-4 card">
-          <div className="card-body">
-            <label htmlFor="PostDestacado" className="form-label">Post destacado:</label>
-            <select id="PostDestacado" onChange={handlePostDestacadoChange} className="form-control">
-              <option value="no">No</option>
-              <option value="si">Sí</option>
-            </select>
-
-            {PostDestacado && (
-              <>
-                <select className="form-control mt-2" onChange={handlePostChange}>
-                  <option value="">Select a blog</option>
-                  {db_posts.map((post, index) => (
-                    <option key={index} value={post.url}>
-                      {post.titulo}
-                    </option>
-                  ))}
-                </select>
-                {selectedPost && (
-                  <div>
-                    <h2>{selectedPost.titulo}</h2>
-                    <p>{selectedPost.descripcion}</p>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-        </div>
-
-
-
-
-        {/* agregar datos de contacto */}
-        <div className="mb-4 card">
-          <div className="card-body">
-            <label className="form-label">¿Desea agregar datos de contacto?</label>
-            <select value={selectionContacto} onChange={handleContactoChange} className="form-control">
-              <option value="no">No</option>
-              <option value="si">Sí</option>
-            </select>
-
-
-            {selectionContacto === 'si' && (
-              <div>
-                <label className="form-label">Correo electrónico:</label>
-                <input type="text" value={email} onChange={handleEmailChange} className="form-control" />
-                <br />
-                <label>Pagina Web:</label>
-                <input type="text" value={paginaWeb} onChange={handlepaginaWebChange} className="form-control" />
-              </div>
-            )}
-          </div>
-        </div>
-
-
-        {/* Pie de página */}
-
-
-        <div className="mb-4 card">
-          <div className="card-body">
-            <Form.Check
-              type="switch"
-              id="footerSwitch"
-              label="FOOTER"
-              checked={footer.active}
-              onChange={handleFooterActiveChange}
-            />
-            {footer.active ?
-              <>
-                <label>Texto del pie de página:</label>
-                <input type="text" placeholder="texto" className="form-control" onChange={handleFooterTextoChange} value={footer.texto.content} />
-                <Form.Check
-                  type="switch"
-                  id="footerUrlSwitch"
-                  label="Url del pie de página:"
-                  checked={footer.url.isActive}
-                  onChange={handleFooterUrlActiveChange}
-                />
-                {footer.url.isActive ?
-                  <input type="text" placeholder="Url de redireccion" className="form-control" onChange={handleFooterUrlChange} value={footer.url.content} />
-                  :
-                  <></>
-                }
-                <Form.Check
-                  type="switch"
-                  id="footerImagenSwitch"
-                  label="Imagen del pie de página"
-                  checked={footer.imagen.isActive}
-                  onChange={handleFooterImagenActiveChange}
-                />
-                {footer.imagen.isActive ?
-                  <input type="text" placeholder="url de la imagen" className="form-control" onChange={handleFooterImagenChange} value={footer.imagen.content} />
-                  :
-                  <></>
-                }
-              </>
-              :
-              <></>
-            }
-          </div>
-        </div>
-
-        <button type="submit" className="btn btn-primary">Enviar</button>
-      </form>
-      <Modal show={showModal} onHide={() => setShowModal(false)} dialogClassName="modal-xl">
-        <Modal.Header closeButton>
-          <Modal.Title>{modalContent.title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Alert variant={modalContent.variant}>
-            {modalContent.body}
-          </Alert>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
     </div>
 
-  );
+    {/* Modal */}
+    <Modal show={showModal} onHide={() => setShowModal(false)} dialogClassName="modal-xl">
+        <Modal.Header closeButton>
+            <Modal.Title>{modalContent.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <Alert variant={modalContent.variant}>
+                {modalContent.body}
+            </Alert>
+        </Modal.Body>
+        <Modal.Footer>
+            <Button variant="secondary" onClick={() => setShowModal(false)}>
+                Cerrar
+            </Button>
+        </Modal.Footer>
+    </Modal>
+</div>
+
+
+
+    );
 }
 
 export default FormXSD;
