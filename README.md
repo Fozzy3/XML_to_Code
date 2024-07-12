@@ -1,6 +1,6 @@
-# Generador de Blogs Web
+# Generador de Tiendas web
 
-Prototipo para la creación automática de blogs personalizados basado en las metodologías MDA y MDE.
+Prototipo para la creación automática de tiendas personalizados basado en las metodologías MDA y MDE.
 
 ## Requisitos Previos
 
@@ -15,7 +15,7 @@ Prototipo para la creación automática de blogs personalizados basado en las me
 3. Asegúrate de tener Python 3.9 o superior instalado.
 4. Abre el proyecto en Visual Studio Code.
 5. Abre la terminal de Visual Studio Code.
-6. Ubícate en la ruta `//creador-blogs-back`.
+6. Ubícate en la ruta `//server`.
 7. Ejecuta los siguientes comandos uno por uno:
     ```sh
     python3 -m venv venv
@@ -23,7 +23,7 @@ Prototipo para la creación automática de blogs personalizados basado en las me
     pip install -r .\requirements.txt
     hypercorn main:app --bind 0.0.0.0:8000
     ```
-8. Abre otra terminal, ubícate en la ruta `//creador-blogs` y ejecuta:
+8. Abre otra terminal, ubícate en la ruta `//client` y ejecuta:
     ```sh
     npm install
     npm start
@@ -37,7 +37,7 @@ En la aplicación encontrarás tres pestañas:
 1. **Upload File**: Carga un archivo `.xml` para validar su estructura con el XSD.
 2. **Form XSD**: Selecciona los componentes para tu página web, valida con el metamodelo y genera la página descargable en un archivo `.zip`.
 
-## Estructura del Blog
+## Estructura de la tienda
 
 - **Header**
     - Logo
@@ -67,8 +67,8 @@ En la aplicación encontrarás tres pestañas:
 ## Plantillas Disponibles
 
 - Header
-- Imagen del blog
-- Contenido del blog
+- Imagen de la tienda
+- Contenido de la tienda
 
 ## Construido con
 
