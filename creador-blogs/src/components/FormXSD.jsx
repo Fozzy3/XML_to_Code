@@ -387,7 +387,6 @@ function FormXSD() {
                         {PostDestacado && (
                             <>
                                 <select className="form-control mt-2" onChange={handlePostChange}>
-                                    <option value="">Seleccione un blog</option>
                                     {db_posts.map((post, index) => (
                                         <option key={index} value={post.url}>{post.titulo}</option>
                                     ))}
