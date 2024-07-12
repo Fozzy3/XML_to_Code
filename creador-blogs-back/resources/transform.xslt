@@ -10,7 +10,7 @@
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>BLOG</title>
+        <title>ElectroWorld</title>
         <link rel="stylesheet" href="./css/main.css"/>
         <link rel="stylesheet" href="./css/font/flaticon.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -59,7 +59,7 @@
     </section>
     <section id="todosLosBlogs" class="blogs-post-container">
         <div class="grid-container">
-            <h3>BLOGS</h3>
+            <h3>ElectroWorld</h3>
                 <xsl:apply-templates select="todosLosBlogs/posts"/>
         </div>
     </section>
@@ -71,14 +71,14 @@
 
 <xsl:template match="blogDestacado">
   <div class="grid-container blogs-main-new">
-    <h3>BLOG PRINCIPAL</h3>
+    <h3>Articulo mas vendido</h3>
     <div class="blogs-news-img-container">
       <img src="{imagen}"/>
     </div>
     <div class="blogs-news-info-container">
       <h2><xsl:value-of select="titulo"/></h2>
       <p><xsl:value-of select="descripcion"/></p>
-      <a href="{url}" class="blogs-button">Leer más</a>
+      <a href="{url}" class="blogs-button">Comprar</a>
     </div>
   </div>
 </xsl:template>
@@ -88,7 +88,7 @@
       <img src="{imagen}" alt=""/>
       <h4 title="{titulo}"><xsl:value-of select="titulo"/></h4>
       <p><xsl:value-of select="descripcion"/></p>
-      <a href="{url}" class="blogs-button">Leer más</a>
+      <a href="{url}" class="blogs-button">Comprar</a>
     </article>
 </xsl:template>
 

@@ -1,14 +1,15 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 a {
     text-decoration: none;
     display: inline;
-    color: black;
+    color: #bb86fc;
 }
 
 .grid-container {
@@ -22,14 +23,13 @@ header {
     display: grid;
     grid-template-rows: 1fr 1fr;
     font-family: 'Roboto Slab', serif;
-    
 }
 
 header .header-icons-conteiner {
     width: 100%;
     height: 50px;
     display: grid;
-    background-color: #2f343f;
+    background-color: #1f1f1f;
 }
 
 header .header-icons-conteiner .icons {
@@ -47,14 +47,14 @@ header .header-icons-conteiner .icons a {
     margin-left: 10px;
 }
 
-header .header-icons-conteiner .icons span{
-    color: white;
+header .header-icons-conteiner .icons span {
+    color: #bb86fc;
     font-size: 35px;
 }
 
 nav {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     height: 90px;
 }
 
@@ -62,9 +62,9 @@ nav .nav-logo-conteiner {
     margin-left: 50px;
 }
 
-nav .nav-logo-conteiner img{
-    width: 50px;
-    margin-top: 10px;
+nav .nav-logo-conteiner img {
+    width: 120px;
+    margin: 10px;
 }
 
 nav .profile-link {
@@ -73,25 +73,20 @@ nav .profile-link {
     justify-content: flex-end;
 }
 
-
-
-
-
 nav .profile-link a {
     color: #8c93b1;
     border-bottom: 1px solid #8c93b1;
     margin: 20px;
 }
 
-
-.home-main{
+.home-main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     height: 100%;
     background-image: url(../assets/img/richardstallman.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover ;
+    background-size: cover;
     margin-top: -90px;
 }
 
@@ -108,14 +103,13 @@ nav .profile-link a {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    font-weight: 700px;
+    font-weight: 700;
     letter-spacing: 10px;
-    color: white;
+    color: #bb86fc;
     text-align: center;
-
 }
 
-.home-main-button button{
+.home-main-button button {
     width: 110px;
     height: 50px;
     background: #2f343f;
@@ -124,29 +118,27 @@ nav .profile-link a {
 }
 
 .home-main-button button a {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 18px;
-    color: white;
+    color: #e0e0e0;
 }
 
 .blogs-main {
     display: grid;
-    
 }
 
 .blogs-news-container {
-    background-color: #dfe3e9;
+    background-color: #1f1f1f;
     padding: 0px 50px 40px;
 }
 
 .blogs-main-new {
-    
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr;
 }
 
-.blogs-news-img-container{
+.blogs-news-img-container {
     margin-right: 20px;
     display: flex;
     align-items: center;
@@ -181,7 +173,7 @@ nav .profile-link a {
     padding: 0 50px 40px;
 }
 
-.blogs-post-container p{
+.blogs-post-container p {
     text-align: justify;
 }
 
@@ -195,7 +187,7 @@ nav .profile-link a {
     border: 1px solid #2f343f;
     padding: 10px 15px;
     font-size: 12px;
-    color: black;
+    color: #e0e0e0;
 }
 
 .blogs-post-container .post-container {
@@ -213,30 +205,27 @@ nav .profile-link a {
     object-fit: cover;
     width: 100%;
     height: 240px;
-    border: 5px solid black;
+    border: 5px solid #2f343f;
 }
 
 footer {
     padding: 20px 0;
     width: 100%;
-    background-color: #2f343f;
+    background-color: #1f1f1f;
     border-top: 35px solid #8c93b1;
     text-align: center;
-    color: white;
-    
+    color: #e0e0e0;
 }
+
 footer p, a {
-    color: white;
+    color: #e0e0e0;
 }
-
-
-
 
 .blogpost-img-container {
     padding: 0px 50px 40px;
 }
 
-.blogpost-img-container img{
+.blogpost-img-container img {
     width: 100%;
 }
 
@@ -244,36 +233,35 @@ footer p, a {
     padding: 0px 50px 40px;
 }
 
-.blogpost-main-container h3{
+.blogpost-main-container h3 {
     padding-bottom: 30px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.blogpost-main-container article h1{
+.blogpost-main-container article h1 {
     font-size: 30px;
 }
 
 .contact-main-container {
     width: 100%;
     min-height: 250px;
-    background-color: #dfe3e9;
+    background-color: #1f1f1f;
     display: inline-block;
     text-align: center;
     grid-template-columns: 1fr 1fr;
 }
 
-.contact-main-container img{
+.contact-main-container img {
     width: 80px;
 }
 
-.contact-main-container div{
-    
+.contact-main-container div {
     display: inline-block;
     width: 49.5%;
 }
 
 .contact-main-container div a {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .contact-main-container .contact-left, .contact-right {
@@ -281,98 +269,94 @@ footer p, a {
     margin-top: 85px;
 }
 
-/*Imagenes y texto de blog1 articulo1*/
-
-.txt1-blog1-container p{
+.txt1-blog1-container p {
     font-size: 18px;
-    line-height : 25px;
-   
+    line-height: 25px;
 }
 
-.blog1-img1-container img{
+.blog1-img1-container img {
     width: 80%;
-    display:block;
-    margin:auto; 
+    display: block;
+    margin: auto;
 }
 
-.blog1-img1-container p{
+.blog1-img1-container p {
     font-size: 18px;
-    line-height : 25px;
+    line-height: 25px;
 }
 
-.blog1-img2-container img{
+.blog1-img2-container img {
     width: 50%;
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-.blog1-img2-container p{
+
+.blog1-img2-container p {
     font-size: 18px;
-    line-height : 25px;
+    line-height: 25px;
 }
 
-.txt2-blog1-container{
+.txt2-blog1-container {
     font-size: 18px;
-    line-height : 25px;
+    line-height: 25px;
 }
 
-.blog1-img3-container img{
+.blog1-img3-container img {
     width: 50%;
     float: right;
     margin-left: 20px;
     margin-bottom: 20px;
 }
 
-.blog1-img3-container p{
+.blog1-img3-container p {
     font-size: 18px;
-    line-height : 25px;
+    line-height: 25px;
 }
 
-.imagen3{
+.imagen3 {
     width: 80%;
-    display:block;
-    margin:auto; 
-    
+    display: block;
+    margin: auto;
 }
 
-.blog1-img5-container img{
+.blog1-img5-container img {
     width: 80%;
-    display:block;
-    margin:auto; 
+    display: block;
+    margin: auto;
     height: 400px;
-
 }
-.blog1-img5-container p{
+
+.blog1-img5-container p {
     font-size: 18px;
-    line-height : 25px;
+    line-height: 25px;
 }
 
-.imagen7{
+.imagen7 {
     width: 80%;
-    display:block;
-    margin:auto; 
+    display: block;
+    margin: auto;
 }
 
-.imagen9{
+.imagen9 {
     width: 50%;
     float: right;
     margin-left: 20px;
     margin-bottom: 20px;
-    
 }
 
-.parrafo{
+.parrafo {
     font-size: 18px;
-    line-height : 25px;
+    line-height: 25px;
 }
 
-.imagen10{
+.imagen10 {
     width: 80%;
-    display:block;
-    margin:auto;    
+    display: block;
+    margin: auto;
 }
 
-.width100{
+.width100 {
     width: 100%;
 }
 

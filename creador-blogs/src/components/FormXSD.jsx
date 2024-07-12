@@ -253,14 +253,14 @@ function FormXSD() {
     <div className="row">
         <div className="col-lg-6">
             <form className='formulario' onSubmit={handleSubmit}>
-                <h2 className="mb-4 text-center text-primary">Crear Nuevo Blog</h2>
+                <h2 className="mb-4 text-center text-primary">Crear nueva tienda</h2>
 
                 {/* Configuración del Encabezado */}
                 <div className="card mb-4 border-primary">
                     <div className="card-header bg-primary text-white">Configuración del Encabezado</div>
                     <div className="card-body">
                         <div className="mb-3">
-                            <label htmlFor="header" className="form-label">Header:</label>
+                            <label htmlFor="header" className="form-label">Encabezado:</label>
                             <select id="header" onChange={handleHeaderChange} className="form-control">
                                 <option value="no">No</option>
                                 <option value="si">Sí</option>
@@ -324,7 +324,7 @@ function FormXSD() {
 
                                 {/* Navbar */}
                                 <div className="mb-3">
-                                    <label htmlFor="navbar" className="form-label">Navbar:</label>
+                                    <label htmlFor="navbar" className="form-label">Barra de navegación:</label>
                                     <select id="navbar" onChange={handleNavbarChange} className="form-control">
                                         <option value="no">No</option>
                                         <option value="si">Sí</option>
@@ -352,12 +352,12 @@ function FormXSD() {
                     </div>
                 </div>
 
-                {/* Agregar Posts */}
+                {/* Agregar Articulos */}
                 <div className="card mb-4 border-secondary">
-                    <div className="card-header bg-secondary text-white">Agregar Posts</div>
+                    <div className="card-header bg-secondary text-white">Agregar Articulos</div>
                     <div className="card-body">
                         <div className="mb-3">
-                            <label className="form-label">Número de Posts:</label>
+                            <label className="form-label">Número de Articulos:</label>
                             <select value={number} onChange={handleNumberPostsChange} className="form-control">
                                 {[...Array(10)].map((_, index) => (
                                     <option key={index} value={index + 1}>{index + 1}</option>
@@ -375,10 +375,10 @@ function FormXSD() {
         <div className="col-lg-6">
             {/* Post Destacado */}
             <div className="card mb-4 border-warning">
-                <div className="card-header bg-warning text-white">Post Destacado</div>
+                <div className="card-header bg-warning text-white">Articulo mas Vendido</div>
                 <div className="card-body">
                     <div className="mb-3">
-                        <label htmlFor="PostDestacado" className="form-label">Post Destacado:</label>
+                        <label htmlFor="PostDestacado" className="form-label">Articulo Destacado:</label>
                         <select id="PostDestacado" onChange={handlePostDestacadoChange} className="form-control">
                             <option value="no">No</option>
                             <option value="si">Sí</option>
